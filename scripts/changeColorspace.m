@@ -1,4 +1,4 @@
-function [out] = changeColorspace(img, from, to)  
+function [out] = changecolorspace(img, from = 'rgb', to = 'rgb')  
 
   switch from
     case 'hsi'
@@ -7,8 +7,8 @@ function [out] = changeColorspace(img, from, to)
       out = hsv2rgb(img);
     case 'ycbcr'
       out = ycbcr2rgb(img);
-    otherwise
-      out = img;
+    case 'gray'
+      out = rgb2gray(img);
   end  
     
   switch to

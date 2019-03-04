@@ -1,4 +1,4 @@
-function CompareImages(img1, img2) 
+function compareimages(img1, img2) 
   figure(1);
   
   subplot(2, 2, 1);

@@ -1,6 +1,6 @@
-function [out] = ResizeImage(img, ratio, layersRange, colorspace) 
+function [out] = resizeimage(img, ratio = 1, layersRange = 1, colorspace = 'rgb') 
   
-  out = changeColorspace(img, 'rgb', colorspace);
+  out = changecolorspace(img, 'rgb', colorspace);
   
   original_rows = size(out, 1);
   original_cols = size(out, 2);
@@ -18,7 +18,7 @@ function [out] = ResizeImage(img, ratio, layersRange, colorspace)
   out = changeColorspace(out, colorspace, 'rgb');
 end
 
-function [out] = compress(img, sizes, layersRange)
+function [out] = compressimage(img, sizes, layersRange)
   
   original_rows = size(img, 1);
   original_cols = size(img, 2);
