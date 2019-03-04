@@ -3,7 +3,7 @@ function CompareImages(img1, img2)
   
   subplot(2, 2, 1);
   imshow(img1);
-  title('Image');
+  title('Image 1');
 
   subplot(2, 2, 2);
   imhist(img1);
@@ -11,7 +11,7 @@ function CompareImages(img1, img2)
   
   subplot(2, 2, 3);
   imshow(img2);
-  title('Image');
+  title('Image 2');
 
   subplot(2, 2, 4);
   imhist(img2);
