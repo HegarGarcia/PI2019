@@ -24,5 +24,5 @@
 
 function [out] = movav (image, mask_width, mask_height)
   h = ones(mask_height, mask_width) / (mask_width * mask_height);
-  out = uint8(filter2(h, image, 'valid'));
+  out = (filter2(h, image, 'valid'));
 endfunction
