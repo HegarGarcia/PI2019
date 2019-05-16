@@ -1,5 +1,5 @@
 # Leer imagen
-img = imread("lena.bmp");
+img = imread("images/lena.bmp");
 
 # Imagen en double y escala de grises
 img = double(rgb2gray(img));
@@ -34,14 +34,14 @@ for i = 1:(rows * columns)
 endfor
   
 figure;
-subplot(1, 3, 1);
+##subplot(1, 3, 1);
 imshow(log(img_ifs + 1), []);
 
-subplot(1, 3, 2);
-imshow(img_it, []);
-
-subplot(1, 3, 3);
-imshow(img_itu, []);
+##subplot(1, 3, 2);
+##imshow(img_it, []);
+##
+##subplot(1, 3, 3);
+##imshow(img_itu, []);
 
 imwrite(log(img_ifs + 1), strcat("./outputs/", "p2_filtro_pasa_alta_ventana_", num2str(window_size), ".jpg"));
 imwrite(img_it, strcat("./outputs/", "p2_dominio_espacial_ventana_", num2str(window_size), ".jpg"));

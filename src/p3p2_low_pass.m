@@ -2,7 +2,7 @@ close all;
 clear all;
 
 # Leer imagen
-img = imread("lena.bmp");
+img = imread("images/lena.bmp");
 
 # Imagen en double y escala de grises
 img = double(rgb2gray(img));
@@ -27,11 +27,11 @@ img_ifs = fftshift(abs(img_if));                # Imagen con filtro pasa baja
 img_it = uint8(real(ifft2(fftshift(img_if))));  # Imagen en Dominio Espacial
   
 figure;
-subplot(1, 2, 1);
+##subplot(1, 2, 1);
 imshow(log(img_ifs + 1), []);
 
-subplot(1, 2, 2);
-imshow(img_it, []);
+##subplot(1, 2, 2);
+##imshow(img_it, []);
 
 imwrite(log(img_ifs + 1), strcat("./outputs/", "p3_filtro_pasa_baja_ventana_", num2str(window_size), ".jpg"));
 imwrite(img_it, strcat("./outputs/", "p3_dominio_espacial_ventana_", num2str(window_size), ".jpg"));

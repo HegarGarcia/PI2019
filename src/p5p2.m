@@ -2,7 +2,7 @@ close all;
 clear all;
 
 % Leer la imagen
-img = imread('lena.bmp');
+img = imread('images/lena.bmp');
 [rows, columns,  depth] = size(img);
 
 % Si es a color reducirla a escala de grises
